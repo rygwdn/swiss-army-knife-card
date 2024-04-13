@@ -162,15 +162,20 @@ class SwissArmyKnifeCard extends LitElement {
     this.isSafari14 = this.isSafari && /Version\/14\.[0-9]/.test(window.navigator.userAgent);
     this.isSafari15 = this.isSafari && /Version\/15\.[0-9]/.test(window.navigator.userAgent);
     this.isSafari16 = this.isSafari && /Version\/16\.[0-9]/.test(window.navigator.userAgent);
-    this.isSafari16 = this.isSafari && /Version\/16\.[0-9]/.test(window.navigator.userAgent);
+    this.isSafari17 = this.isSafari && /Version\/17\.[0-9]/.test(window.navigator.userAgent);
+    // this.isSafariGte16 = this.isSafari && /Version\/(?:1[6-9]|2[0-9])\.[0-9]/.test(window.navigator.userAgent);
+    this.isSafariGte16 = this.isSafari && /Version\/1[6-9]\.[0-9]/.test(window.navigator.userAgent);
 
     // The iOS app does not use a standard agent string...
     // See: https://github.com/home-assistant/iOS/blob/master/Sources/Shared/API/HAAPI.swift
     // It contains strings like "like Safari" and "OS 14_2", and "iOS 14.2.0"
 
-    this.isSafari14 = this.isSafari14 || /os 15.*like safari/.test(window.navigator.userAgent.toLowerCase());
-    this.isSafari15 = this.isSafari15 || /os 14.*like safari/.test(window.navigator.userAgent.toLowerCase());
+    this.isSafari14 = this.isSafari14 || /os 14.*like safari/.test(window.navigator.userAgent.toLowerCase());
+    this.isSafari15 = this.isSafari15 || /os 15.*like safari/.test(window.navigator.userAgent.toLowerCase());
     this.isSafari16 = this.isSafari16 || /os 16.*like safari/.test(window.navigator.userAgent.toLowerCase());
+    this.isSafari17 = this.isSafari17 || /os 17.*like safari/.test(window.navigator.userAgent.toLowerCase());
+    // this.isSafariGte16 = this.isSafariGte16 || /os (?:1[6-9]|2[0-9]).*like safari/.test(window.navigator.userAgent);
+    this.isSafariGte16 = this.isSafariGte16 || /os 1[6-9].*like safari/.test(window.navigator.userAgent);
 
     this.lovelace = SwissArmyKnifeCard.lovelace;
 
