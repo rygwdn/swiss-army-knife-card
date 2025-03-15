@@ -347,7 +347,7 @@ export default class Toolset {
     // Rotating a card can produce different results on several browsers.
     // A 1:1 card / toolset gives the same results, but other aspect ratio's may give different results.
     // if (((this._card.isSafari) || (this._card.iOS)) && (!this._card.isSafariGte16)) {
-    if (((this._card.isSafari) || (this._card.iOS)) && (!(this._card.isSafari16 || this._card.isSafari17))) {
+    if (((this._card.isSafari) || (this._card.iOS)) && (!(this._card.isSafari16 || this._card.isSafari17 || this._card.isSafari18))) {
       //
       // Render path for Safari if not Safari 16:
       //
